@@ -11,6 +11,13 @@
     </style>
 </head>
 <body>
+	<?php
+    session_start();
+    if(!isset($_SESSION['simple_login'],$_SESSION['pass_login'])){
+        header("Location: index.php");
+        exit();
+    }
+    ?>
 	<h1 align="center">User login info info</h1><hr><br>
 	        <button type="button" value="Logout" style="float: right;"><a href="logoutaction.php">Logout</button>
 	        <button type="button" value="" style="float: right;"><a href="home.php">Home</a></button><br><br>
@@ -23,8 +30,8 @@
 	        		</tr>
 	        		<tr>
 	        			<td>1</td>
-	        			<td></td>
-	        			<td></td>
+	        			<td><?php echo $_SESSION['simple_login']; ?></td>
+	        			<td><?php echo $_SESSION['pass_login']; ?></td>
 	        		</tr>
 	        		<tr>
 	        			<td>2</td>

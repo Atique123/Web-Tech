@@ -9,38 +9,34 @@
       <form action="" method="POST">
             <h1 align="center">Register</h1><hr>
             <table align="center">
-                  <tr>
-                        <td>UN:</td>
-                        <td><input type="text" name="un" required=""></td>
-                  </tr>
-                  <tr>
-                        <td>PW:</td>
-                        <td><input type="password" name="pw" required=""></td>
-                  </tr>
-                  <tr>
-                        <td>R-PW:</td>
-                        <td><input type="password" name="rpw" required=""></td>
-                  </tr>
-                  <tr>
-                        <td>Email:</td>
-                        <td><input type="email" name="email"></td>
-                  </tr>
-                  <tr>
-                        <td>Phone:</td>
-                        <td><input type="text" name="phone"></td>
-                  </tr>
-                  <tr>
-                        <td>Full name:</td>
-                        <td><input type="text" name="fn"></td>
-                  </tr>
-                  <tr>
-                        <td></td>
-                        <td><input type="submit" name="submit" value="Submit"></td>
-                  </tr>
-                  <tr>
-                        <td></td>
-                        <td><input type="reset" name="reset" value="Reset"></td>
-                  </tr>
+               <tr>
+                  <td>UN:</td>
+                  <td><input type="text" name="un" required=""></td>
+               </tr>
+               <tr>
+                  <td>PW:</td>
+                  <td><input type="password" name="pw" required=""></td>
+               </tr>
+               <tr>
+                  <td>R-PW:</td>
+                  <td><input type="password" name="rpw" required=""></td>
+               </tr>
+               <tr>
+                  <td>Email:</td>
+                  <td><input type="email" name="email"></td>
+               </tr>
+               <tr>
+                  <td>Phone:</td>
+                  <td><input type="text" name="phone"></td>
+               </tr>
+               <tr>
+                  <td>Full name:</td>
+                  <td><input type="text" name="fn"></td><br>
+               </tr>
+               <tr>
+                  <td><input type="submit" name="submit" value="Submit"></td>
+                  <td><input type="reset" name="reset" value="Reset"></td>
+               </tr>
             </table>
       </form>
      <?php
@@ -54,12 +50,12 @@
                $fname = validate($_POST["fn"]);
 
 
-         echo "User:".$un."<br/>";
-         echo "Password:".$pw."<br/>";
-         echo "Retyoe Pass:".$rpw."<br/>";
-         echo "Email:".$email."<br/>";
-         echo "Phone:".$phone."<br/>";
-         echo "Full Name:".$fname."<br/>";
+         // echo "User:".$un."<br/>";
+         // echo "Password:".$pw."<br/>";
+         // echo "Retyoe Pass:".$rpw."<br/>";
+         // echo "Email:".$email."<br/>";
+         // echo "Phone:".$phone."<br/>";
+         // echo "Full Name:".$fname."<br/>";
          }
          function validate($data){
             $data = trim($data);
@@ -67,6 +63,9 @@
             $data = htmlspecialchars($data);
             return $data;
          }
+
+         $darray = array('User'=>$un,'Password'=>$pw,'R-PW'=>$rpw,'Email'=>$email,'Phone'=>$phone,'FUllName'=>$fname);
+         print_r($darray);
       ?>
 </body>
 </html>

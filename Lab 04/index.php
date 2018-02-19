@@ -8,7 +8,8 @@
 </head>
 <body>
     <form name="LOGIN" action="" method="POST">
-        <fieldset align="center" style="float: center;">
+        <div align="center">
+        <fieldset align="center" style="width: 20%;">
         <h1 align="center">LOGIN</h1><hr>
         <button type="button" value="" style="float: right;"><a href="register.php">Register</a></button><br><br>
         <table align="center">
@@ -26,6 +27,7 @@
             </tr>
         </table>
         </fieldset>
+        </div>
     </form>
 
     <?php
@@ -40,6 +42,7 @@
         if($username == $user['user'] && $pass == $user['pass']){
             session_start();
             $_SESSION['simple_login'] = $username;
+            $_SESSION['pass_login'] = $pass;
             header("Location: home.php");
             exit();
         }else{
