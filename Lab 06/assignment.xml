@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assignment SYSTEM "assignment.dtd">
+<assignment>
+	<student>
+		<name>Sample student</name>
+		<id>12-21211-1</id>
+		<cgpa>3.86</cgpa>
+		<courses>
+			<Cname>Webtech,Computer Graphics</Cname>
+			<Csection>B,B</Csection>
+			<Cgrade>A+,A</Cgrade>
+		</courses>
+	</student>
+	<student>
+		<name>Sample student 2</name>
+		<id>12-21211-1</id>
+		<cgpa>3.80</cgpa>
+		<courses>
+			<Cname>Webtech,Computer Graphics</Cname>
+			<Csection>B,B</Csection>
+			<Cgrade>A+,A</Cgrade>
+		</courses>
+	</student>
+</assignment>

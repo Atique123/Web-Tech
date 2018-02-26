@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE assignment[
+<ELEMENT assignment(student*)>
+<ELEMENT student(name,id,cgpa,courses+)>
+  <!ELEMENT id (#PCDATA)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT cgpa (#PCDATA)>
+  <!ELEMENT courses (#PCDATA)>
+      <!ATTLIST courses Cname CDATA #required>
+      <!ATTLIST courses Csection CDATA #required>
+      <!ATTLIST courses Cgrade CDATA #required>
+ ]
